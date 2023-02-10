@@ -1,0 +1,17 @@
+---
+title: "python_verbatim"
+author: "Dr. J. Demmler"
+date: "10/20/2022"
+output: 
+  bookdown::gitbook:
+    toc_depth: 3
+    self_contained: true
+    config:
+      sharing: null
+---
+
+````markdown
+`r ''````{python}
+# some Python code
+```
+````
