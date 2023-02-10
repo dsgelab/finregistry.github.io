@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3 About SD Desktop | FinRegistry Researcher Handbook</title>
+  <title>FinRegistry Researcher Handbook</title>
   <meta name="description" content="A manual on how to use SD Desktop with FinRegistry" />
   <meta name="generator" content="bookdown 0.30 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="3 About SD Desktop | FinRegistry Researcher Handbook" />
+  <meta property="og:title" content="FinRegistry Researcher Handbook" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="A manual on how to use SD Desktop with FinRegistry" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3 About SD Desktop | FinRegistry Researcher Handbook" />
+  <meta name="twitter:title" content="FinRegistry Researcher Handbook" />
   
   <meta name="twitter:description" content="A manual on how to use SD Desktop with FinRegistry" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="working-with-sd-desktop.html"/>
-<link rel="next" href="applications.html"/>
+
+<link rel="next" href="working-with-sd-desktop.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -224,133 +224,43 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="about-sd-desktop" class="section level1 hasAnchor" number="3">
-<h1><span class="header-section-number">3</span> About SD Desktop<a href="about-sd-desktop.html#about-sd-desktop" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="overview" class="section level2 hasAnchor" number="3.1">
-<h2><span class="header-section-number">3.1</span> Overview<a href="about-sd-desktop.html#overview" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Where to find things:</p>
-<p><img src="../images/sd_desktop.png" width="30%" /></p>
-<ul>
-<li>Applications:
-<ul>
-<li>Start applications</li>
-</ul></li>
-<li>External Drive:
-<ul>
-<li>For backup of project data and documents by the project manager</li>
-</ul></li>
-<li>Data Gateway:
-<ul>
-<li>Mount SD Connect drive with sensitive data</li>
-</ul></li>
-<li>Shared-directory:
-<ul>
-<li>This is where all project data and software should be kept</li>
-</ul></li>
-</ul>
-<p>Ctrl+C and Ctrl+V do not always work in this version of Linux, for
-example it won’t work in the terminal. You can either use the right
-click of the mouse and select copy/paste or use Ctrl+Shift+C/V instead.</p>
+<div id="header">
+<h1 class="title">FinRegistry Researcher Handbook</h1>
+<p class="author"><em>Finnish Institute of Molecular Medicine (FIMM)</em></p>
+<p class="date"><em>2023-02-10</em></p>
 </div>
-<div id="data-gateway" class="section level2 hasAnchor" number="3.2">
-<h2><span class="header-section-number">3.2</span> Data Gateway<a href="about-sd-desktop.html#data-gateway" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>To connect to the sensitive data and additionally provided software you
-will have to launch the Data Gateway first (the shortcut is located in
-the top left of your screen).</p>
-<p>Double click on “Data Gateway” and click on the switch symbol next to
-“SD Connect”. Now sign in with your CSC username and password:</p>
-<p><img src="../images/sd_connect1.png" width="70%" /></p>
-<p><strong>Note:</strong> You can ignore “SD Apply” for now.</p>
-<p>Hit “Create” and then minimise this window. You will now see a new
-mounted drive called “Projects”</p>
-<p><img src="../images/sd_connect2.png" width="90%" /></p>
-<p><img src="../images/sd_connect3.png" width="40%" /></p>
-<p>This is where all data and applications from SD Desktop reside. They are
-unencrypted on mount. Please note that the folder is read-only.</p>
-<p>The Data Gateway can also be mounted over the command line with:</p>
-<pre><code>go-fuse -mount /media/volume/Projects</code></pre>
-<p>and closed with <code>Ctrl + C</code>.</p>
-</div>
-<div id="the-external-backup-drive" class="section level2 hasAnchor" number="3.3">
-<h2><span class="header-section-number">3.3</span> The external backup drive<a href="about-sd-desktop.html#the-external-backup-drive" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>It is really important to save the data on the external drive. If the
-desktop crashes and needs rebooting everything in the shared or personal
-folders will be lost, but the external drive is not affected from this.
-The path to the external drive is <code>media/volume</code>.</p>
-<p>I have set up the following structure on the external drive:</p>
-<pre><code>|-- admin
-|  |-- documentation*
-|  |  |-- images*
-|  |-- scripts*
-|  |-- encryption_keys
-|-- bin
-|-- users
-|  |-- username
-|-- data-out
-|  |-- username
-
-* these folder might only available within the FinRegistry admin project</code></pre>
-</div>
-<div id="the-shared-directory" class="section level2 hasAnchor" number="3.4">
-<h2><span class="header-section-number">3.4</span> The shared directory<a href="about-sd-desktop.html#the-shared-directory" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Files saved to the <code>shared-directory</code> are visible to other project
-members. The data structure is the same as on the external drive. You
-can backup your file/folder from the <code>shared-directory</code> over the command
-line like:</p>
-<pre><code>cp &lt;filename&gt; /media/volume/users/&lt;username&gt;
-cp -R /&lt;folder&gt; /media/volume/users/&lt;username&gt;</code></pre>
-<p>The <code>bin</code> directory in the shared directory is for executing singularity
-files, i.e. these are extra apas, that are not pre-installed in with SD
-Desktop.</p>
-<p><strong>Note:</strong> The “Shared” folder is specific to the virtual machine you are
-using. You won’t be able to see your files when logging into another
-machine unless to make them available on SD Connect.</p>
-</div>
-<div id="help-pages-inside-sd-desktop" class="section level2 hasAnchor" number="3.5">
-<h2><span class="header-section-number">3.5</span> Help pages inside SD Desktop<a href="about-sd-desktop.html#help-pages-inside-sd-desktop" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>We have prepared a shared document inside SD Desktop.</p>
-<ul>
-<li>Connect to the Data Gateway</li>
-<li>Got to</li>
-</ul>
-<!-- -->
-<pre><code>Projects/SD\ connect/project_&lt;projectnumber&gt;/2004706_shared_admin_docs</code></pre>
-<p>where <strong>projectnumber</strong> is your CSC project number</p>
-<ul>
-<li>Open <code>working-with-sd-desktop.html</code> (actually any of the html files
-will also work, but you will need to scroll to the top of the
-document before saving) in Firefox</li>
-<li>Set as the homepage
-<ul>
-<li>Open Application Menu (top right)</li>
-<li>Settings -&gt; Home</li>
-<li>Homepage and new windows</li>
-</ul></li>
-<li>You might also want to set new pages to be blank</li>
-</ul>
-<p>The path will look like this:</p>
-<pre><code>file:///home/&lt;username&gt;/Projects/SD%20Connect/project_&lt;projectnumber&gt;/2004706_shared_admin_docs/working-with-sd-desktop.html</code></pre>
-<p>where <strong>username</strong> is your username and <strong>projectnumber</strong> is your
-project number.</p>
-<p><img src="../images/homepage.png" width="70%" /></p>
-</div>
-<div id="close-your-connection-the-sd-desktop" class="section level2 hasAnchor" number="3.6">
-<h2><span class="header-section-number">3.6</span> Close your connection the SD Desktop<a href="about-sd-desktop.html#close-your-connection-the-sd-desktop" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>You can close your connection to your virtual Desktop in two ways:</p>
-<p>Log out from your Desktop (in the workspace view, top right corner of
-the browser, select your username and log out). This will close all
-applications in your virtual Desktop and disconnect the work session.
-You will be able to access the virtual Desktop at any time after logging
-in to the services.</p>
-<p>If you started a data analysis programmatically (you are running a
-script) you can close the browser window. This doesn’t interfere with
-the processes running. Thus, when you reconnect to your Desktop, you
-have all your tools and interfaces still open and can continue working.
-However, remember to log out from the Desktop once the analysis is
-finished. If you leave more than ten connections open, you will be
-unable to re-access the services.</p>
-<p><strong>Reminder:</strong> Never use the lock or reboot buttons in SD Desktop as you
-will not be able to connect to the Desktop again after that…</p>
+<div id="what-is-finregistry" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">1</span> What is FinRegistry?<a href="what-is-finregistry.html#what-is-finregistry" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="summary-of-the-study-plan" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> Summary of the study plan<a href="what-is-finregistry.html#summary-of-the-study-plan" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>FinRegistry is a scientific, purely register-based research conducted by
+the National Institute for Health and Welfare (THL) and Institute for
+Molecular Medicine Finland (FIMM).</p>
+<p>The aim of the project is to leverage nation-wide health and other
+supporting registry data to explore comprehensive risk trajectories of
+disease outcomes and use this information to derive outcome-specific
+prediction models. However, this research question can’t be defined
+within a traditional epidemiological framework that pre-specifies one
+exposure and one outcome because this project is inherently unbiased and
+limiting it to only one exposure and one outcome will substantially
+reduce the potential for discovering novel relationships of clinical
+relevance. This project will use the complex relationship between health
+outcomes, medications, socio-demographic information and familial risk
+to provide new epidemiological and biological hypotheses that can then
+be directly followed up with more targeted studies. We hypothesize that
+many adverse health outcomes share common risk factors (e.g. mother
+health and socioeconomic status during pregnancy later having an effect
+on the child’s health) and might form compound outcomes, independent
+from the established disease backtaxonomy (International Classification
+of Diseases, ICD). These compound outcomes possibly built over decades
+of follow-up and multiple conditions are expected to better describe the
+biological background of diseases compared to a single disease status.
+Hypothesis is that the combination of multiple diseases and medications
+can provide better predictions of the first occurrence of diseases than
+a traditional model based on a limited set of diseases and risk factors
+and reveal new epidemiological and biological insights.</p>
+<p><strong>Summary of the study plan in Finnish can be found here:</strong>
+<a href="https://docs.google.com/document/d/16unLWpuD4Kmt0xHe_8lRK2V32EbmmDppnC43j7M6KpU/edit?usp=sharing">All_registry_summary.docx</a> </p>
 </div>
 </div>
             </section>
@@ -358,8 +268,8 @@ will not be able to connect to the Desktop again after that…</p>
           </div>
         </div>
       </div>
-<a href="working-with-sd-desktop.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="applications.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+
+<a href="working-with-sd-desktop.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
