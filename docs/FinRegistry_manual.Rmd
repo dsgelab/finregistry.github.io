@@ -1,27 +1,27 @@
 ---
-title: "FinRegistry SD Desktop manual"
-author: "Dr. J. Demmler"
+title: "FinRegistry Researcher Handbook"
+author: "Finnish Institute of Molecular Medicine (FIMM)"
 date: "`r Sys.Date()`"
 description: "A manual on how to use SD Desktop with FinRegistry"
 output: 
   bookdown::gitbook:
-    toc_depth: 3
-    self_contained: true
-config:
+    highlight: tango
+    css: ../assets/style.css
+  config:
     toc:
       collapse: subsection
       scroll_highlight: true
       before: |
-        <li><img src="../images/FinRegistry_Official_Logo.png" width="270" height="270"></li>
+        <li class="toc-logo"><a href="./"><img src="../images/FinRegistry_Official_Logo.png"></a></li>
       after: null
     search:
-      engine: lunr
-      options: null
+       engine: lunr
+       options: null
     sharing:
-    github: yes
-    facebook: yes
-    twitter: yes
-    all: no
+       github: yes
+       facebook: yes
+       twitter: yes
+       all: no
 ---
 
 ```{r setup, include=FALSE}
