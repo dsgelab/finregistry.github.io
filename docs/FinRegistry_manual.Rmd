@@ -8,12 +8,15 @@ output:
     toc_depth: 3
     self_contained: true
 config:
-  toc:
-    collapse: section
-    before: |
-      <img src="../images/FinRegistry_Official_Logo.png" width="270" height="270">
+    toc:
+      collapse: subsection
+      scroll_highlight: true
+      before: |
+        <li><img src="../images/FinRegistry_Official_Logo.png" width="270" height="270"></li>
+      after: null
     search:
       engine: lunr
+      options: null
     sharing:
     github: yes
     facebook: yes
