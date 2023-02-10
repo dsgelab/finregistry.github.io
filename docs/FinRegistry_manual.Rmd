@@ -7,10 +7,18 @@ output:
   bookdown::gitbook:
     toc_depth: 3
     self_contained: true
-    config:
-      sharing: null
-params:
-  output_dir: "docs"
+config:
+  toc:
+    collapse: section
+    before: |
+      <img src="../images/FinRegistry_Official_Logo.png" width="270" height="270">
+    search:
+      engine: lunr
+    sharing:
+    github: yes
+    facebook: yes
+    twitter: yes
+    all: no
 ---
 
 ```{r setup, include=FALSE}
