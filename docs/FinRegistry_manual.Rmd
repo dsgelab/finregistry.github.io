@@ -5,11 +5,12 @@ date: "`r Sys.Date()`"
 description: "A manual on how to use SD Desktop with FinRegistry"
 output: 
   bookdown::gitbook:
-    output_dir: "docs"
     toc_depth: 3
     self_contained: true
     config:
       sharing: null
+params:
+  output_dir: "docs"
 ---
 
 ```{r setup, include=FALSE}
@@ -134,7 +135,7 @@ Restrictive measures of EU towards named individuals and business entities: http
 Where to find things:
 
 ```{r, echo=FALSE, out.width='30%'}
-knitr::include_graphics("images/sd_desktop.png")
+knitr::include_graphics("../images/sd_desktop.png")
 ```
 
 * Applications:
@@ -158,7 +159,7 @@ To connect to the sensitive data and additionally provided software you will hav
 Double click on “Data Gateway” and click on the switch symbol next to “SD Connect”. Now sign in with your CSC username and password:
 
 ```{r, echo=FALSE, out.width='70%'}
-knitr::include_graphics("images/sd_connect1.png")
+knitr::include_graphics("../images/sd_connect1.png")
 ```
 
 **Note:** You can ignore "SD Apply" for now.
@@ -167,11 +168,11 @@ Hit “Create” and then minimise this window. You will now see a new mounted d
 
 
 ```{r, echo=FALSE, out.width='90%'}
-knitr::include_graphics("images/sd_connect2.png")
+knitr::include_graphics("../images/sd_connect2.png")
 ```
 
 ```{r, echo=FALSE, out.width='40%'}
-knitr::include_graphics("images/sd_connect3.png")
+knitr::include_graphics("../images/sd_connect3.png")
 ```
 
 This is where all data and applications from SD Desktop reside. They are unencrypted on mount. Please note that the folder is read-only.
@@ -252,7 +253,7 @@ where **username** is your username and **projectnumber** is your project number
 
 
 ```{r, echo=FALSE, out.width='70%'}
-knitr::include_graphics("images/homepage.png")
+knitr::include_graphics("../images/homepage.png")
 ```
 
 
@@ -359,7 +360,7 @@ tmp <- installed.packages()
 tmp <- tmp %>% as.data.frame() %>% select("Package", "Version", "Built")
 rownames(tmp) <- 1:nrow(tmp)
 datatable(tmp)
-write.csv(tmp, "R_packages.csv", row.names=FALSE)
+#write.csv(tmp, "R_packages.csv", row.names=FALSE)
 ```
 
 A list of the pre-installed R packages can be found [here](./R_packages.csv).
@@ -394,7 +395,7 @@ In R Studio go to Tools -> Global Options -> Python and select Python Interprete
 
 To use Python Chunks in an R Markdown document load `library(reticulate)` and  use Python chunks, e.g.
 
-```{r, child = "python_verbatim.Rmd"}
+```{r, child = "../python_verbatim.Rmd"}
 ```
 
 ## Python
