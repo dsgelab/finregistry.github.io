@@ -68,19 +68,52 @@ a traditional model based on a limited set of diseases and risk factors
 and reveal new epidemiological and biological insights.
 
 **Summary of the study plan in Finnish can be found here:**
-[All_registry_summary.docx](https://docs.google.com/document/d/16unLWpuD4Kmt0xHe_8lRK2V32EbmmDppnC43j7M6KpU/edit?usp=sharing) 
+[All_registry_summary.docx](https://docs.google.com/document/d/16unLWpuD4Kmt0xHe_8lRK2V32EbmmDppnC43j7M6KpU/edit?usp=sharing).
 
-# Working with SD Desktop
+## Data sources and description
+
+* [Registries and Research Data](https://docs.google.com/document/d/1NIR4Zqp3_8AzMzx-ZFWnMb5J5lSOrkVEGBgoem0Iux4/edit?usp=sharing)
+
+* [tracking_registries](https://docs.google.com/spreadsheets/d/1oyI4PFz2fUJkqVgf2ILF_lSw9zTgzEVo2pP-rPPLM1c/edit?usp=sharing)
+
+* [File information](https://docs.google.com/spreadsheets/d/1d7wNi10jZEKtC1YCF1hfLYfNqsTzOY_RypHzdXwKSOo/edit?usp=sharing)
+
+* [Data Dictionary](https://docs.google.com/spreadsheets/d/1qpa9KFp36x1qQff14OEhtviQqrJQO-qQIKuqt-QX_qA/edit?usp=sharing)
+
+### Data from THL
+
+### Data from DVV
+
+### Data from ETK Pensions
+
+### Data from Statistics Finland
+
+## Data pre-processing
+
+## FinnGen processing and data
+
+### Data pre-processing
+
+### Detailed Longitudinal (DL)
+
+### Endpointer
+
+### Minimal Phenotype (MP)
+
+## Metadata
+
+## Application process
+
+* [FinRegistry application processes, guides for admin](https://docs.google.com/document/d/1O3N4GzQsh0lM8MMYDmKWvtTBNqfmIcf8NUd1mFNHPmM/edit?usp=sharing)
+
+
+## Infrastructure
+
+# Working with ePouta (core analysts)
+
+# Working with SD Desktop (researchers)
 
 **Important News 09/02/2023**
-
-\
-Please create a new virtual machine (VM) as soon as possible to be able
-to use the new tools. The data manager can backup your data to SD
-Connect. Email the data manager for help.
-
-SD Desktop underwent quite a few changes recently, but the internal
-documentation has not yet been updated to include those.
 
 Changes (DO NOT TRY THOSE OUT ON A MACHINE THAT WAS BUILT BEFORE
 03/02/2023 AS YOU MIGHT LOSE YOUR EXTERNAL DRIVE AND ALL DATA ON IT):
